@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wayne &amp; Co. — Demo Store</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 13h17v6a8.5 8.5 0 0 1-8.5 8.5A8.5 8.5 0 0 1 6 19v-6Z" stroke="#241a12" stroke-width="1.6"/>
+          <path d="M23 15h1.5a3 3 0 0 1 0 6H23" stroke="#241a12" stroke-width="1.6"/>
+          <path d="M11 9c-1 1.2-1 2.2 0 3.4M16 9c-1 1.2-1 2.2 0 3.4" stroke="#c69a3a" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Wayne &amp; Co.
+      </a>
+      <span class="nav-tag">Checkout.com Integration Demo</span>
+    </div>
+  </nav>
+
+  <header class="hero wrap">
+    <div>
+      <p class="eyebrow">Single-origin, small batch</p>
+      <h1>Roasted for the slow morning.</h1>
+      <p class="lede">
+        A demo storefront for testing a Checkout.com Flow integration end to end —
+        from a product page, to a hosted payment session, to a real (sandbox) charge.
+      </p>
+      <a href="/checkout.html" class="btn">Buy now — $18.00</a>
+    </div>
+
+    <div class="steam-figure">
+      <svg class="steam" viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg">
+        <path class="steam-line" d="M60 90 C50 75, 70 65, 60 50 C50 35, 70 25, 62 10" />
+        <path class="steam-line" d="M90 90 C80 75, 100 65, 90 50 C80 35, 100 25, 92 10" />
+        <path class="steam-line" d="M120 90 C110 75, 130 65, 120 50 C110 35, 130 25, 122 10" />
+        <path d="M35 95h100l-8 55a20 20 0 0 1-20 17H63a20 20 0 0 1-20-17l-8-55Z"
+              fill="#3a2b1d" />
+        <rect x="35" y="95" width="100" height="14" fill="#241a12" />
+        <path d="M55 118h60" stroke="#c69a3a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+        <path d="M55 132h60" stroke="#c69a3a" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+      </svg>
+    </div>
+  </header>
+
+  <main class="wrap" style="padding-bottom: 4rem;">
+    <div class="product-card" style="max-width: 420px;">
+      <div>
+        <h2 style="font-size:1.15rem;">Wayne Roast — Single-Origin Coffee</h2>
+        <p style="margin:0.4rem 0 0; color: var(--espresso-light); font-size:0.92rem;">
+          250g whole bean. Medium roast, notes of stone fruit and dark honey.
+        </p>
+      </div>
+      <div class="origin-strip">
+        <span>Ethiopia</span>
+        <span>Washed</span>
+        <span>1,850m</span>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="price">$18.00</div>
+          <div class="price-note">Free shipping on this demo order</div>
+        </div>
+      </div>
+
+      <div class="integration-options">
+        <p class="integration-label">Three ways to pay — same order, three Checkout.com integrations</p>
+
+        <a href="/checkout.html" class="btn btn-block">Checkout with Flow (embedded)</a>
+        <p id="flow-error" class="integration-error"></p>
+
+        <button id="hpp-btn" class="btn btn-block btn-secondary" data-error-target="hpp-error">
+          Pay via Hosted Payments Page</br>(Additional $0.10)</button>
+        </button>
+        <p id="hpp-error" class="integration-error"></p>
+
+        <button id="payment-link-btn" class="btn btn-block btn-secondary" data-error-target="payment-link-error">
+          Get a Payment Link</br>(Additional $0.20)
+        </button>
+        <p id="payment-link-error" class="integration-error"></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="/store.js"></script>
+</body>
+</html>

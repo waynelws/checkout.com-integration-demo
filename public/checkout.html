@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Wayne &amp; Co.</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="/">Wayne &amp; Co.</a>
+      <span class="nav-tag">Secure checkout</span>
+    </div>
+  </nav>
+
+  <main class="wrap checkout-wrap">
+    <section class="order-summary">
+      <h2>Order summary</h2>
+      <div class="line-item">
+        <span>Wayne Roast — Single-Origin Coffee (250g)</span>
+        <span>$18.00</span>
+      </div>
+      <div class="line-item">
+        <span>Shipping</span>
+        <span>Free</span>
+      </div>
+      <div class="line-item total">
+        <span>Total due</span>
+        <span>$18.00</span>
+      </div>
+
+      <div class="sandbox-note">
+        <strong>Sandbox mode.</strong> No real money moves. Use test card
+        <code>4242 4242 4242 4242</code>, any future expiry, CVV <code>100</code>.
+      </div>
+    </section>
+
+    <section class="flow-panel">
+      <h2>Payment details</h2>
+      <div id="flow-container"></div>
+      <p id="flow-status" data-state="loading">Loading payment methods…</p>
+    </section>
+  </main>
+
+  <!-- Only ever load this script directly from checkout-web-components.checkout.com,
+       per Checkout.com's PCI guidance — don't self-host or bundle it. -->
+  <script src="https://checkout-web-components.checkout.com/index.js"></script>
+  <script src="/checkout.js"></script>
+</body>
+</html>

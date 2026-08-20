@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment successful — Wayne &amp; Co.</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="/">Wayne &amp; Co.</a>
+    </div>
+  </nav>
+
+  <main class="status-page">
+    <div class="status-card">
+      <div class="status-mark">✓</div>
+      <h1>Payment received</h1>
+      <p style="color: var(--espresso-light);">
+        Your sandbox order is complete. In a real integration, wait for the
+        Checkout.com webhook before marking the order as paid — the redirect
+        here is a UX signal, not proof of payment.
+      </p>
+      <p id="payment-id" style="font-size: 0.85rem; color: var(--gold-dim); margin-top: 1rem;"></p>
+      <a class="btn" href="/" style="margin-top: 1.5rem;">Back to store</a>
+    </div>
+  </main>
+
+  <script>
+    const id = new URLSearchParams(window.location.search).get("cko-payment-id");
+    if (id) {
+      document.getElementById("payment-id").textContent = "Payment ID: " + id;
+    }
+  </script>
+</body>
+</html>
